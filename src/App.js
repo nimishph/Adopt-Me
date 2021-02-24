@@ -1,42 +1,22 @@
 import React from "react";
 import { render } from "react-dom";
+import { Link, Router } from "@reach/router";
 import SearchParams from "./SearchParams";
+import Details from "./Details";
 
 const App = () => {
-  // return React.createElement("div", {}, [
-  //   React.createElement("h1", {}, "Adopt Me!"),
-  //   React.createElement(Pet, {
-  //     name: "Luna",
-  //     animal: "Dog",
-  //     breed: "Havanese",
-  //   }),
-  //   React.createElement(Pet, {
-  //     name: "Pepper",
-  //     animal: "Bird",
-  //     breed: "Cockatiel",
-  //   }),
-  //   React.createElement(Pet, {
-  //     name: "Doinks",
-  //     animal: "Cat",
-  //     breed: "Mixed",
-  //   }),
-  // ]);
-
   return (
     <React.StrictMode>
       <div>
-        <h1 id="something-important">Location API</h1>
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
         <Router>
-          <SearchParams path='/'/>
+          <SearchParams path="/" />
+          <Details path="/details/:id" />
         </Router>
       </div>
     </React.StrictMode>
-      // <div>
-      //   <h1 id="something-important">Adopt Me!</h1>
-      //   <Pet name="Luna" animal="Dog" breed="Havanese" />
-      //   <Pet name="Pepper" animal="Bird" breed="Cockatiel" />
-      //   <Pet name="Doink" animal="Cat" breed="Mixed" />
-      // </div>
   );
 };
 
