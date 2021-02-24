@@ -4,3 +4,4 @@ dist/
 coverage/
 .vscode/
 .emv
+src/Details.js
